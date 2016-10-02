@@ -1,0 +1,62 @@
+header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 5em;
+  background-color: black; }
+  @media (min-width: 768px) {
+    header {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row; } }
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  color: white; }
+
+.gallery {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em; }
+  @media (min-width: 768px) {
+    .gallery {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      flex-direction: row; } }
+
+.thumbnail {
+  height: 10em;
+  width: 10em;
+  border: 3px solid black;
+  border-radius: 3px;
+  margin: 2em; }
+
+footer {
+  height: 3em;
+  background-color: black; }
+
+#twitter-icon {
+  fill: white;
+  height: 3em;
+  width: 3em; }
+
+/*# sourceMappingURL=application.css.map */

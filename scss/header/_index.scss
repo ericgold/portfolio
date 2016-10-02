@@ -1,0 +1,15 @@
+header {
+	@include flexy(column);
+	height: 5em;
+	background-color: black;
+
+	@include mq(medium) {
+		@include flexy(row);
+	}
+}
+
+h1 {
+	font-family: 'Shrikhand', cursive;
+	color: white;
+}
+
