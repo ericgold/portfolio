@@ -20,7 +20,8 @@ header {
 
 h1 {
   font-family: 'Shrikhand', cursive;
-  color: white; }
+  color: white;
+  margin: auto auto auto 1em; }
 
 .gallery {
   display: -webkit-box;
@@ -30,7 +31,8 @@ h1 {
   display: flex;
   -webkit-flex-direction: column;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   padding: 2em; }
   @media (min-width: 768px) {
@@ -44,19 +46,45 @@ h1 {
       flex-direction: row; } }
 
 .thumbnail {
-  height: 10em;
-  width: 10em;
+  width: 65%;
+  min-height: 10em;
   border: 3px solid black;
   border-radius: 3px;
-  margin: 2em; }
+  margin: 10%;
+  padding: 0.5em;
+  text-align: center;
+  transition-delay: 0s;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-out; }
+  .thumbnail p {
+    font-size: 6em; }
+  .thumbnail:hover {
+    transform: rotateY(180deg);
+    background-color: black;
+    color: white;
+    font-weight: bold; }
+  @media (min-width: 768px) {
+    .thumbnail {
+      width: 35%;
+      margin: 5%; } }
+  @media (min-width: 1024px) {
+    .thumbnail {
+      width: 25%;
+      margin: 2.5%; } }
+  @media (min-width: 1280px) {
+    .thumbnail {
+      width: 12%;
+      margin: 1%; } }
 
 footer {
   height: 3em;
   background-color: black; }
 
 #twitter-icon {
-  fill: white;
-  height: 3em;
-  width: 3em; }
+  height: 4em;
+  width: 4em; }
+
+#twitter-path {
+  fill: white; }
 
 /*# sourceMappingURL=application.css.map */
