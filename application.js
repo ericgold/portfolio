@@ -16,7 +16,35 @@ var $index = 0;
 var $galleryLength = $thumbnails.length;
 
 //replace with an array of project descriptions
-var imageDescription = "This is a temporary project description. More to come.";
+//var imageDescription = "This is a temporary project description. More to come.";
+
+var content = [
+	{
+		desc: "This is the form project",
+		url: "projects/form/index.html"
+	},
+	{
+		desc: "This is the photo gallery project",
+		url: "projects/gallery/index.html"
+	},
+	{
+		desc: "This is the video player project",
+		url: "projects/video/index.html"
+	},
+	{
+		desc: "This is the web app dashboard project",
+		url: "projects/dashboard/index.html"
+	},
+	{
+		desc: "This is the API project",
+		url: "projects/api/index.html"
+	},
+	{
+		desc: "This is my porfolio of freelance writing",
+		url: "http://www.goldcopywriting.com"
+	},
+
+];
 
 $projectText.append($title);
 $projectText.append($description);
@@ -41,6 +69,8 @@ function updateImage(imageLocation, imageTitle, imageDescription) {
 	
 	$title.text(imageTitle);
 	$description.text(imageDescription);
+
+	
 
 	prepOverlay($image, $title, $description);
 }
@@ -67,6 +97,7 @@ function postImage() {
 
 	var imageLocation = $(newImgSelected).attr("src");
 	var imageTitle = $(newImgSelected).attr("alt");
+	var imageDescription = content[$index].desc;
 
 	//NEED AN ARRAY OF DESCRIPTIONS, ONE FOR EACH PROJECT
 	//var imageDescription;
@@ -79,7 +110,10 @@ $(".thumbnail img").click(function(event) {
 	event.preventDefault();
 	var imageLocation = $(this).attr("src");
 	var imageCaption = $(this).attr("alt");
-	$index = $(this).index();
+	$index = $(this).parent().index();
+	console.log($(this).index());
+	
+	var imageDescription = content[$index].desc;
 
 	updateImage(imageLocation, imageCaption, imageDescription);
 	$overlay.slideDown(imageLocation);
