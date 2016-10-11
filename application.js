@@ -1,8 +1,10 @@
 var $overlay = $("<div id='overlay'></div>");
 var $innerOverlay = $("<div id='inner-overlay'></div>");
 var $image = $("<img>");
-var $title = $("<p id='title'></p>");
 
+var $projectText = $("<div id='project-text'></div>");
+
+var $title = $("<p id='title'></p>");
 var $description = $("<p id='description'></p>");
 
 var $leftArrow = $("<button class='arrow'>&#10094</button>");
@@ -16,26 +18,31 @@ var $galleryLength = $thumbnails.length;
 //replace with an array of project descriptions
 var imageDescription = "This is a temporary project description. More to come.";
 
+$projectText.append($title);
+$projectText.append($description);
 $overlay.append($innerOverlay);
-$overlay.append($title);
-$overlay.append($description);
+$overlay.append($projectText);
 $("body").append($overlay);
 
-function prepOverlay(thing) {
+function prepOverlay(image, title, description) {
 	// Add left arrow to inner overlay div
 	$innerOverlay.append($leftArrow);
 	// Add media to the overlay
-	$innerOverlay.append(thing);
+	$innerOverlay.append(image);
+	// Add project title and description to the overlay
+	$innerOverlay.append($projectText);
+
 	// Add right arrow to overlay
 	$innerOverlay.append($rightArrow);
 }
 
 function updateImage(imageLocation, imageTitle, imageDescription) {
 	$image.attr("src", imageLocation);
-	prepOverlay($image);
-
+	
 	$title.text(imageTitle);
 	$description.text(imageDescription);
+
+	prepOverlay($image, $title, $description);
 }
 
 function prevNext(prev) {
