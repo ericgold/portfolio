@@ -5,7 +5,7 @@ var $bio = $("#bio");
 var $overlay = $("<div id='overlay'></div>");
 var $innerOverlay = $("<div id='inner-overlay'></div>");
 
-var $projectInfo = $("<a href=''id='project-info'></a>");
+var $projectInfo = $("<a href='' id='project-info'></a>");
 var $image = $("<img>");
 var $projectText = $("<div id='project-text'></div>");
 var $title = $("<p id='title'></p>");
@@ -25,23 +25,23 @@ var $galleryLength = $thumbnails.length;
 var content = [
 	{
 		desc: "A responsive form with CSS transitions and Flexbox layout.",
-		url: "projects/form/index.html"
+		url: "projects/form/form.html"
 	},
 	{
 		desc: "A Flexbox photo gallery with jQuery lightbox and search filter.",
-		url: "projects/gallery/index.html"
+		url: "projects/photo-gallery/photo-gallery.html"
 	},
 	{
 		desc: "Custom video player controls with vanilla JavaScript.",
-		url: "projects/video/index.html"
+		url: "projects/video-player/video-player.html"
 	},
 	{
 		desc: "Dashboard with chart.js, vanilla JavaScript, SVG icons, and Sass.",
-		url: "projects/dashboard/index.html"
+		url: "projects/app-dashboard/app-dashboard.html"
 	},
 	{
 		desc: "Gallery drawing on SWAPI, the Star Wars API, and OMBb, the Open Movie Database API, with jQuery and Sass.",
-		url: "projects/api/index.html"
+		url: "projects/star-wars/star-wars.html"
 	},
 	{
 		desc: "My porfolio of freelance writing for print and web.",
@@ -161,18 +161,11 @@ $overlay.click(function(event){
 	$(this).slideUp("fast");
 });
 
-/*
-// Bio Drop
-
-function toggleBio() {
-//	$name.after($bio);
-	$name.toggle();
-	$bio.toggle();
+function setLink() {
+	$(this).attr("href", content[$index].url);
 }
 
-
-$nameWrapper.hover(toggleBio);
-*/
+$projectInfo.hover(setLink);
 
 
 

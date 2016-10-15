@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+      	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
+      	<link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet">
+      	<link rel="stylesheet" type="text/css" href="css/toggle-switch/toggle-switch.css">
+      	<link href="css/application.css" rel="stylesheet" type="text/css"/>
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>TrapApp</title>
+	</head>
+	<body>
+		<div class="outer-container">
+			<header id="main-header">
+				
+				<h1 id="app-name">Trap<span>App</span></h1>
+				
+				<div class="svg-container" id="bell-container">
+					<svg id="bell-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+						<g id="_x36__6_">
+							<g>
+								<path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+								c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+							</g>
+						</g>
+					</svg>
+				</div>
+				<div id="profile-box">
+					<img id="profile-photo" src="images/user1.jpg" alt="winston cho profile photo">
+					<p id="profile-name">Winston Cho</p>
+				</div>
+			</header>
+			<div class="inner-container">
+				<nav id="main-nav">
+					<div class="svg-container nav-container-active">
+						<svg class="nav-icon nav-icon-active" id="dashboard-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							<g id="_x31_0_20_">
+								<g>
+									<path class="st0" d="M25,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,16.7,23.3,18,25,18z M24,14h2v2h-2V14z M25,26
+									c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,24.7,23.3,26,25,26z M24,22h2v2h-2V22z M17,26c1.7,0,3-1.3,3-3
+									c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,24.7,15.3,26,17,26z M16,22h2v2h-2V22z M28,0H6C3.8,0,2,1.8,2,4v24c0,2.2,1.8,4,4,4h22
+									c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2V8h26V28z M30,6H4V4c0-1.1,0.9-2,2-2h22
+									c1.1,0,2,0.9,2,2V6z M17,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C14,16.7,15.3,18,17,18z M16,14h2v2h-2V14z M9,26
+									c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C6,24.7,7.3,26,9,26z M8,22h2v2H8V22z M9,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3
+									c-1.7,0-3,1.3-3,3C6,16.7,7.3,18,9,18z M8,14h2v2H8V14z"/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<div class="svg-container">
+						<svg class="nav-icon" id="members-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							<g id="_x37__17_">
+								<g>
+									<path class="st0" d="M18,16.4c1.3-1.7,2-3.9,2-6.4c0-5.5-4-10-9-10C6,0,2,4.5,2,10c0,2.4,0.8,4.6,2,6.4c-2.3,0.8-4,3-4,5.6v4c0,3.3,2.7,6,6,6h10c3.3,0,6-2.7,6-6v-4C22,19.4,20.3,17.2,18,16.4z M4,10c0-4.4,3.1-8,7-8c3.9,0,7,3.6,7,8s-3.1,8-7,8
+									C7.1,18,4,14.4,4,10z M20,25.5c0,2.5-2.2,4.5-4.9,4.5H6.9C4.2,30,2,28,2,25.5v-3c0-2.1,1.6-3.9,3.8-4.4C7.2,19.3,9,20,11,20
+									c2,0,3.8-0.7,5.2-1.9c2.2,0.5,3.8,2.2,3.8,4.4V25.5z M23,8h8c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1h-8c-0.6,0-1,0.4-1,1
+									C22,7.6,22.4,8,23,8z M31,24h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6c0.6,0,1-0.4,1-1C32,24.4,31.6,24,31,24z M31,12h-8
+									c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1C32,12.4,31.6,12,31,12z M31,18h-6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h6
+									c0.6,0,1-0.4,1-1C32,18.4,31.6,18,31,18z"/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<div class="svg-container">
+						<svg class="nav-icon" id="visits-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							<g id="_x35__10_">
+								<g>
+									<path class="st0" d="M14,0h-2c-1.1,0-2,0.9-2,2v28c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V2C16,0.9,15.1,0,14,0z M14,29
+									c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V3c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M4,9H2c-1.1,0-2,0.9-2,2v19c0,1.1,0.9,2,2,2h2
+									c1.1,0,2-0.9,2-2V11C6,9.9,5.1,9,4,9z M4,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V12c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z M24,16h-2
+									c-1.1,0-2,0.9-2,2v12c0,1.1,0.9,2,2,2h2c1.1,0,2-0.9,2-2V18C26,16.9,25.1,16,24,16z M24,29c0,0.6-0.4,1-1,1c-0.6,0-1-0.4-1-1V19
+									c0-0.6,0.4-1,1-1c0.6,0,1,0.4,1,1V29z"/>
+								</g>
+							</g>
+						</svg>
+					</div>
+					<div class="svg-container" id="settings-icon-container">
+						<svg class="nav-icon" id="settings-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+							<g id="_x32__16_">
+								<g>
+									<path class="st0" d="M26,24H14.9c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h1.1
+									c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,24.4,26.6,24,26,24z M11,27.4c-1.3,0-2.4-1.1-2.4-2.4
+									c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,26.3,12.3,27.4,11,27.4z M26,8H14.9c-0.4-1.7-2-3-3.9-3C9.1,5,7.6,6.3,7.1,8H6
+									C5.4,8,5,8.4,5,9c0,0.6,0.4,1,1,1h1.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26c0.6,0,1-0.4,1-1C27,8.4,26.6,8,26,8z M11,11.4
+									c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4C13.4,10.3,12.3,11.4,11,11.4z M26,16h-2.1
+									c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h10.1c0.4,1.7,2,3,3.9,3c1.9,0,3.4-1.3,3.9-3H26
+									c0.6,0,1-0.4,1-1C27,16.4,26.6,16,26,16z M20,19.4c-1.3,0-2.4-1.1-2.4-2.4c0-1.3,1.1-2.4,2.4-2.4c1.3,0,2.4,1.1,2.4,2.4
+									C22.4,18.3,21.3,19.4,20,19.4z M28,0H4C1.8,0,0,1.8,0,4v24c0,2.2,1.8,4,4,4h24c2.2,0,4-1.8,4-4V4C32,1.8,30.2,0,28,0z M30,28
+									c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V4c0-1.1,0.9-2,2-2h24c1.1,0,2,0.9,2,2V28z"/>
+								</g>
+							</g>
+						</svg>
+					</div>
+				</nav>
+				<main class="widget-container">
+					<div id="subhead">
+						<h2 class="tab" id="dashboard-tab">Dashboard</h2>
+						<input type="text" id="search" placeholder="Search">
+					</div>
+					<div id="alert">
+						<h4>Alert</h4>
+						<p id="alert-text">Nullam quis risus eget uma mollis ornare vel eu leo. Nullam id dolor id nibh ultricles vehicula ut id elit. Curabitur blandit temus portitor.</p>
+						<a href="#" id="alert-x">x</a>
+					</div>
+					<div class="widget-section-col">
+						<nav id="traffic-line-nav">
+							<h3 class="widget-heading">Traffic</h3>
+
+							<button class="traffic-line-button" id="hourly-button">Hourly</button>
+							<button class="traffic-line-button" id="daily-button">Daily</button>
+							<button class="traffic-line-button traffic-active" id="weekly-button">Weekly</button>
+							<button class="traffic-line-button" id="monthly-button">Monthly</button>
+
+						</nav>
+						
+						<canvas id="traffic-line"></canvas>
+					</div>
+					<div class="widget-section-full">
+						<div class="widget-section-half" id="traffic-bar-box">
+							<h3 class="widget-heading">Daily Traffic</h3>
+							<canvas id="traffic-bar"></canvas>
+						</div>
+						<div class="widget-section-half" id="mobile-users-box">
+							<h3 class="widget-heading">Mobile Users</h3>
+							<canvas id="mobile-users"></canvas>
+						</div>
+					</div>
+
+					<div class="widget-section-col" id="social-stat-box">
+						<h3 class="widget-heading">Social Stats</h3>
+						<div class="social-stat-container">
+							<div class="social-unit">
+								<div class="svg-container">
+									<svg version="1.1" id="twitter-icon" x="0px" y="0px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+										<path id="twitter-path" d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
+										c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,7.8,5.5,5.2,2.2,1.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5
+										c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1
+										c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,3,10.1,3c12.1,0,18.7-10,18.7-18.7
+										c0-0.3,0-0.6,0-0.8C30,5.6,31.1,4.4,32,3.1z"/>
+									</svg>
+								</div>
+								<div class="social-count-container">
+									<h4 class="social-heading">Twitter</h4>
+									<p class="social-count">10,345</p>
+								</div>	
+							</div>
+
+							<div class="social-unit">
+								<div class="svg-container">
+									<svg id="facebook-icon" version="1.1" x="0px" y="0px" viewBox="0 0 80 80" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<path id="facebook-path" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
+									</svg>
+								</div>
+								<div class="social-count-container">
+									<h4 class="social-heading">Facebook</h4>
+									<p class="social-count">8,739</p>
+								</div>
+							</div>
+
+							<div class="social-unit">
+								<div class="svg-container">
+									<svg version="1.1" id="google-icon" x="0px" y="0px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve">
+										<path id="google-path" d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
+										c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
+										c-0.3-0.2-0.5-0.4-0.6-0.4c-0.2,0-0.5,0-1,0c-0.7,0-1.4,0-2,0.1c-0.7,0.1-1.4,0.2-2.1,0.5c-0.7,0.2-1.3,0.5-1.9,0.9s-1,0.8-1.3,1.4
+										c-0.3,0.6-0.5,1.3-0.5,2.1c0,0.9,0.2,1.7,0.7,2.3c0.5,0.7,1.1,1.2,1.8,1.6s1.5,0.7,2.3,0.9s1.6,0.3,2.4,0.3c0.8,0,1.5-0.1,2.2-0.2
+										c0.7-0.2,1.3-0.4,1.9-0.8c0.6-0.3,1.1-0.8,1.4-1.4C17.5,27.2,17.7,26.5,17.7,25.7z M15.4,9.1c0-0.8-0.1-1.6-0.3-2.5
+										c-0.2-0.9-0.5-1.7-0.9-2.5c-0.4-0.8-0.9-1.5-1.6-2c-0.7-0.5-1.5-0.8-2.3-0.8c-1.2,0-2.1,0.4-2.8,1.3c-0.7,0.9-1,1.9-1,3.2
+										c0,0.6,0.1,1.2,0.2,1.9c0.1,0.7,0.4,1.3,0.7,2c0.3,0.7,0.7,1.3,1.1,1.8c0.4,0.5,0.9,1,1.5,1.3c0.6,0.3,1.2,0.5,1.9,0.5
+										c1.2,0,2.1-0.4,2.7-1.2C15.1,11.4,15.4,10.4,15.4,9.1z M12.9,0h8.4l-2.6,1.5h-2.6c0.9,0.6,1.6,1.4,2.1,2.4s0.8,2.1,0.8,3.2
+										c0,0.9-0.1,1.8-0.4,2.5c-0.3,0.7-0.7,1.3-1.1,1.8c-0.4,0.4-0.8,0.9-1.3,1.2c-0.4,0.4-0.8,0.8-1.1,1.2c-0.3,0.4-0.4,0.8-0.4,1.3
+										c0,0.3,0.1,0.7,0.3,1c0.2,0.3,0.5,0.6,0.8,0.9c0.3,0.3,0.7,0.6,1.1,0.9c0.4,0.3,0.8,0.7,1.2,1.1c0.4,0.4,0.8,0.8,1.1,1.3
+										c0.3,0.5,0.6,1,0.8,1.6c0.2,0.6,0.3,1.3,0.3,2c0,2.1-0.9,3.9-2.7,5.4c-1.9,1.7-4.6,2.5-8.1,2.5c-0.8,0-1.5-0.1-2.3-0.2
+										c-0.8-0.1-1.6-0.3-2.3-0.6c-0.8-0.3-1.5-0.7-2.1-1.1c-0.6-0.4-1.1-1-1.5-1.7C1,27.6,0.8,26.9,0.8,26c0-0.8,0.2-1.6,0.7-2.6
+										c0.4-0.8,1-1.5,1.8-2.1c0.8-0.6,1.8-1.1,2.8-1.4c1-0.3,2-0.5,3-0.7c0.9-0.1,1.9-0.2,2.9-0.3c-0.8-1.1-1.2-2-1.2-2.9
+										c0-0.2,0-0.3,0-0.5c0-0.1,0.1-0.3,0.1-0.4c0-0.1,0.1-0.2,0.2-0.4c0.1-0.2,0.1-0.3,0.1-0.4c-0.5,0.1-1,0.1-1.3,0.1
+										c-1.9,0-3.5-0.6-4.9-1.9c-1.4-1.3-2-2.8-2-4.7c0-1.8,0.6-3.4,1.8-4.8C6,1.7,7.5,0.8,9.3,0.4C10.5,0.1,11.7,0,12.9,0z M32.8,4.9v2.5
+										h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9H32.8z"/>
+								</svg>
+								</div>
+								<div class="social-count-container">
+									<h4 class="social-heading">Google+</h4>
+									<p class="social-count">2,530</p>
+								</div>
+							</div>
+
+							<div class="social-unit">
+								<div class="svg-container">
+									<svg version="1.1" id="linkedin-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64">
+									<g id="linkedin-path">
+										<path d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"></path>
+										<path d="M2 12h6v18h-6v-18z"></path>
+										<path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+									</g>
+									</svg>
+								</div>
+								<div class="social-count-container">
+									<h4 class="social-heading">LinkedIn</h4>
+									<p class="social-count">340</p>
+								</div>	
+							</div>
+
+							<div class="social-unit">
+								<div class="svg-container">
+									<svg version="1.1" id="instagram-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64">
+									<g id="instagram-path">
+										<path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
+										<path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
+										<path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
+									</g>
+									</svg>
+																	</div>
+								<div class="social-count-container">
+									<h4 class="social-heading">Instagram</h4>
+									<p class="social-count">4,778</p>
+								</div>	
+							</div>
+
+							<div class="social-unit">
+								<div class="svg-container">
+									<svg version="1.1" id="codepen-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  x="0px" y="0px" viewBox="0 0 64 64">
+										<path id="codepen-path" d="M29.555 11.501l-14-9.333c-0.336-0.224-0.774-0.224-1.109 0l-14 9.333c-0.278 0.185-0.445 0.498-0.445 0.832v9.333c0 0.334 0.167 0.647 0.445 0.832l14 9.333c0.168 0.112 0.361 0.168 0.555 0.168s0.387-0.056 0.555-0.168l14-9.333c0.278-0.185 0.445-0.498 0.445-0.832v-9.333c0-0.334-0.167-0.647-0.445-0.832zM15 20.465l-5.197-3.465 5.197-3.465 5.197 3.465-5.197 3.465zM16 11.798v-6.93l11.197 7.465-5.197 3.465-6-4zM14 11.798l-6 4-5.197-3.465 11.197-7.465v6.93zM6.197 17l-4.197 2.798v-5.596l4.197 2.798zM8 18.202l6 4v6.93l-11.197-7.465 5.197-3.465zM16 22.202l6-4 5.197 3.465-11.197 7.465v-6.93zM23.803 17l4.197-2.798v5.596l-4.197-2.798z"></path>
+										</svg>
+								</div>
+								<div class="social-count-container">
+									<h4 class="social-heading">Codepen</h4>
+									<p class="social-count">786</p>
+								</div>	
+							</div>
+
+						</div>
+					</div>
+					<div class="widget-section-lower">
+						<div class="widget-section-flex">
+							<div class="widget-section-half" id="new-members-box">
+								<h3 class="widget-heading">New Members</h3>
+								<div id="new-members">
+									<div class="member-box">
+										<img src="images/user2.jpg" alt="Alice Inwonderland profile photo">
+										<div class="member-info">
+											<p class="member-name">Alice Inwonderland</p>
+											<a class="member-email" href="mailto:alice@rabbithole.com">alice@rabbithole.com</a>
+										</div>
+										<p class="member-date">7/13/16</p>
+									</div>
+									<div class="member-box">
+										<img src="images/user3.jpg" alt="Dan Mann profile photo">
+										<div class="member-info">
+											<p class="member-name">Dan Mann</p>
+											<a class="member-email" href="mailto:d.mann@qmail.com">d.mann@qmail.com</a>
+										</div>
+										<p class="member-date">7/7/16</p>
+									</div>
+									<div class="member-box">
+										<img src="images/user4.jpg" alt="Ashley Pike profile photo">
+										<div class="member-info">
+											<p class="member-name">Ashley Pike</p>
+											<a class="member-email" href="mailto:ashp@saranrae.com">ashp@saranrae.com</a>
+										</div>
+										<p class="member-date">7/6/16</p>
+									</div>
+									<div class="member-box">
+										<img src="images/user5.jpg" alt="Hart Love profile photo">
+										<div class="member-info">
+											<p class="member-name">Hart Love</p>
+											<a class="member-email" href="mailto:hlove@emotion.com">hlove@emotion.com</a>
+										</div>
+										<p class="member-date">6/3/16</p>
+									</div>
+								</div>
+							</div>
+							<div class="widget-section-half" id="recent-activity-box">
+								<h3 class="widget-heading">Recent Activity</h3>
+								<div id="recent-activity">
+									<div class="activity-box">
+										<img src="images/user2.jpg" alt="Alice Inwonderland profile photo">
+										<div class="member-activity">
+											<p class="member-name-action">Alice Inwonderland</p>
+											<p class="member-action">signed up</p>
+											<p class="member-action-time">5 hours ago</p>
+										</div>
+											<svg class="activity-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"></path>
+											</svg>
+										
+											<svg class="activity-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+											</svg>
+										
+									</div>
+									<div class="activity-box">
+										<img src="images/user3.jpg" alt="Dan Mann profile photo">
+										<div class="member-activity">
+											<p class="member-name-action">Dan Mann</p>
+											<p class="member-action">commented on TrapApp's Loudness</p>
+											<p class="member-action-time">6 hours ago</p>
+										</div>
+											<svg class="activity-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M16 6c-1.717 0-3.375 0.271-4.928 0.804-1.46 0.502-2.76 1.211-3.863 2.108-2.069 1.681-3.209 3.843-3.209 6.088 0 1.259 0.35 2.481 1.039 3.63 0.711 1.185 1.781 2.268 3.093 3.133 0.949 0.625 1.587 1.623 1.755 2.747 0.056 0.375 0.091 0.753 0.105 1.129 0.233-0.194 0.461-0.401 0.684-0.624 0.755-0.755 1.774-1.172 2.828-1.172 0.168 0 0.336 0.011 0.505 0.032 0.655 0.083 1.325 0.126 1.99 0.126 1.717 0 3.375-0.271 4.928-0.804 1.46-0.502 2.76-1.211 3.863-2.108 2.069-1.681 3.209-3.843 3.209-6.088s-1.14-4.407-3.209-6.088c-1.104-0.897-2.404-1.606-3.863-2.108-1.553-0.534-3.211-0.804-4.928-0.804zM16 2v0c8.837 0 16 5.82 16 13s-7.163 13-16 13c-0.849 0-1.682-0.054-2.495-0.158-3.437 3.437-7.539 4.053-11.505 4.144v-0.841c2.142-1.049 4-2.961 4-5.145 0-0.305-0.024-0.604-0.068-0.897-3.619-2.383-5.932-6.024-5.932-10.103 0-7.18 7.163-13 16-13z"></path>
+											</svg>
+										
+											<svg class="activity-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+											</svg>
+										
+									</div>
+									<div class="activity-box">
+										<img src="images/user4.jpg" alt="Ashley Pike profile photo">
+										<div class="member-activity">
+											<p class="member-name-action">Ashley Pike</p>
+											<p class="member-action">commented on TrapApp Rules</p>
+											<p class="member-action-time">6 hours ago</p>
+										</div>
+											<svg class="activity-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M16 6c-1.717 0-3.375 0.271-4.928 0.804-1.46 0.502-2.76 1.211-3.863 2.108-2.069 1.681-3.209 3.843-3.209 6.088 0 1.259 0.35 2.481 1.039 3.63 0.711 1.185 1.781 2.268 3.093 3.133 0.949 0.625 1.587 1.623 1.755 2.747 0.056 0.375 0.091 0.753 0.105 1.129 0.233-0.194 0.461-0.401 0.684-0.624 0.755-0.755 1.774-1.172 2.828-1.172 0.168 0 0.336 0.011 0.505 0.032 0.655 0.083 1.325 0.126 1.99 0.126 1.717 0 3.375-0.271 4.928-0.804 1.46-0.502 2.76-1.211 3.863-2.108 2.069-1.681 3.209-3.843 3.209-6.088s-1.14-4.407-3.209-6.088c-1.104-0.897-2.404-1.606-3.863-2.108-1.553-0.534-3.211-0.804-4.928-0.804zM16 2v0c8.837 0 16 5.82 16 13s-7.163 13-16 13c-0.849 0-1.682-0.054-2.495-0.158-3.437 3.437-7.539 4.053-11.505 4.144v-0.841c2.142-1.049 4-2.961 4-5.145 0-0.305-0.024-0.604-0.068-0.897-3.619-2.383-5.932-6.024-5.932-10.103 0-7.18 7.163-13 16-13z"></path>
+											</svg>
+										
+											<svg class="activity-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+											</svg>
+										
+									</div>
+									<div class="activity-box">
+										<img src="images/user5.jpg" alt="Hart Love profile photo">
+										<div class="member-activity">
+											<p class="member-name-action">Hart Love</p>
+											<p class="member-action">posted TrapApp's Loudness</p>
+											<p class="member-action-time">1 day ago</p>
+										</div>
+											<svg class="activity-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M31.818 9.122l-8.939-8.939c-0.292-0.292-0.676-0.226-0.855 0.146l-1.199 2.497 8.35 8.35 2.497-1.199c0.372-0.178 0.438-0.563 0.146-0.855z"></path>
+											<path d="M19.231 4.231l-8.231 0.686c-0.547 0.068-1.002 0.184-1.159 0.899-0 0.001-0 0.001-0.001 0.002-2.232 10.721-9.84 21.183-9.84 21.183l1.793 1.793 8.5-8.5c-0.187-0.392-0.293-0.83-0.293-1.293 0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3c-0.463 0-0.902-0.105-1.293-0.293l-8.5 8.5 1.793 1.793c0 0 10.462-7.608 21.183-9.84 0.001-0 0.001-0 0.002-0.001 0.714-0.157 0.831-0.612 0.898-1.159l0.686-8.231-8.538-8.539z"></path>
+											</svg>
+										
+											<svg class="activity-arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+											</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="widget-section-flex">
+							<div class="widget-section-half">
+								<div id="message-user">
+									<h3 class="widget-heading">Message User</h3>
+
+									<input type="text" id="user-input" placeholder="Search for User">
+									<textarea id="user-message"></textarea>
+									<button type="submit" id="message-button">Send</button>
+
+								</div>
+							</div>
+								<div class="widget-section-half">
+									<div id="settings">
+										<h3 class="widget-heading">Settings</h3>
+										<div class="switch-row">
+											<label class="switch-light switch-ios">
+												<input id="email-switch" type="checkbox">
+												<strong>Send Email Notifications</strong>
+												<span id="lightswitch-email" aria-hidden="true">
+													<span>Off</span>
+													<span>On</span>
+													<a></a>
+												</span>
+											</label>
+										</div>
+										<div class="switch-row">
+											<label class="switch-light switch-ios">
+												<input id="public-switch" type="checkbox">
+												<strong>Set Profile to Public</strong>
+												<span id="lightswitch-public" aria-hidden="true">
+													<span>Off</span>
+													<span>On</span>
+													<a></a>
+												</span>
+											</label>
+										</div>
+										<select id="timezone">
+											<option data-tzone="1" data-gmtAdjustment="GMT-12:00" data-useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+											<option data-tzone="2" data-gmtAdjustment="GMT-11:00" data-useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+											<option data-tzone="3" data-gmtAdjustment="GMT-10:00" data-useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+											<option data-tzone="4" data-gmtAdjustment="GMT-09:00" data-useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+											<option data-tzone="5" data-gmtAdjustment="GMT-08:00" data-useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+											<option data-tzone="6" data-gmtAdjustment="GMT-08:00" data-useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+											<option data-tzone="7" data-gmtAdjustment="GMT-07:00" data-useDaylightTime="0" value="-7">(GMT-07:00) Arizona</option>
+											<option data-tzone="8" data-gmtAdjustment="GMT-07:00" data-useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+											<option data-tzone="9" data-gmtAdjustment="GMT-07:00" data-useDaylightTime="1" value="-7">(GMT-07:00) Mountain Time (US & Canada)</option>
+											<option data-tzone="10" data-gmtAdjustment="GMT-06:00" data-useDaylightTime="0" value="-6">(GMT-06:00) Central America</option>
+											<option data-tzone="11" data-gmtAdjustment="GMT-06:00" data-useDaylightTime="1" value="-6">(GMT-06:00) Central Time (US & Canada)</option>
+											<option data-tzone="12" data-gmtAdjustment="GMT-06:00" data-useDaylightTime="1" value="-6">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+											<option data-tzone="13" data-gmtAdjustment="GMT-06:00" data-useDaylightTime="0" value="-6">(GMT-06:00) Saskatchewan</option>
+											<option data-tzone="14" data-gmtAdjustment="GMT-05:00" data-useDaylightTime="0" value="-5">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+											<option data-tzone="15" data-gmtAdjustment="GMT-05:00" data-useDaylightTime="1" value="-5">(GMT-05:00) Eastern Time (US & Canada)</option>
+											<option data-tzone="16" data-gmtAdjustment="GMT-05:00" data-useDaylightTime="1" value="-5">(GMT-05:00) Indiana (East)</option>
+											<option data-tzone="17" data-gmtAdjustment="GMT-04:00" data-useDaylightTime="1" value="-4">(GMT-04:00) Atlantic Time (Canada)</option>
+											<option data-tzone="18" data-gmtAdjustment="GMT-04:00" data-useDaylightTime="0" value="-4">(GMT-04:00) Caracas, La Paz</option>
+											<option data-tzone="19" data-gmtAdjustment="GMT-04:00" data-seDaylightTime="0" value="-4">(GMT-04:00) Manaus</option>
+											<option data-tzone="20" data-gmtAdjustment="GMT-04:00" data-useDaylightTime="1" value="-4">(GMT-04:00) Santiago</option>
+											<option data-tzone="21" data-gmtAdjustment="GMT-03:30" data-useDaylightTime="1" value="-3.5">(GMT-03:30) Newfoundland</option>
+											<option data-tzone="22" data-gmtAdjustment="GMT-03:00" data-useDaylightTime="1" value="-3">(GMT-03:00) Brasilia</option>
+											<option data-tzone="23" data-useDaylightTime="0" value="-3">(GMT-03:00) Buenos Aires, Georgetown</option>
+											<option data-tzone="24" data-gmtAdjustment="GMT-03:00" data-useDaylightTime="1" value="-3">(GMT-03:00) Greenland</option>
+											<option data-tzone="25" data-gmtAdjustment="GMT-03:00" data-useDaylightTime="1" value="-3">(GMT-03:00) Montevideo</option>
+											<option data-tzone="26" data-gmtAdjustment="GMT-02:00" data-useDaylightTime="1" value="-2">(GMT-02:00) Mid-Atlantic</option>
+											<option data-tzone="27" data-gmtAdjustment="GMT-01:00" data-useDaylightTime="0" value="-1">(GMT-01:00) Cape Verde Is.</option>
+											<option data-tzone="28" data-gmtAdjustment="GMT-01:00" data-useDaylightTime="1" value="-1">(GMT-01:00) Azores</option>
+											<option data-tzone="29" data-gmtAdjustment="GMT+00:00" data-useDaylightTime="0" value="0">(GMT+00:00) Casablanca, Monrovia, Reykjavik</option>
+											<option data-tzone="30" data-gmtAdjustment="GMT+00:00" data-useDaylightTime="1" value="0">(GMT+00:00) Greenwich Mean Time : Dublin, Edinburgh, Lisbon, London</option>
+											<option data-tzone="31" data-gmtAdjustment="GMT+01:00" data-useDaylightTime="1" value="1">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+											<option data-tzone="32" data-gmtAdjustment="GMT+01:00" data-useDaylightTime="1" value="1">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+											<option data-tzone="33" data-gmtAdjustment="GMT+01:00" data-useDaylightTime="1" value="1">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+											<option data-tzone="34" data-gmtAdjustment="GMT+01:00" data-useDaylightTime="1" value="1">(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+											<option data-tzone="35" data-gmtAdjustment="GMT+01:00" data-useDaylightTime="1" value="1">(GMT+01:00) West Central Africa</option>
+											<option data-tzone="36" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Amman</option>
+											<option data-tzone="37" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Athens, Bucharest, Istanbul</option>
+											<option data-tzone="38" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Beirut</option>
+											<option data-tzone="39" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Cairo</option>
+											<option data-tzone="40" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="0" value="2">(GMT+02:00) Harare, Pretoria</option>
+											<option data-tzone="41" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+											<option data-tzone="42" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Jerusalem</option>
+											<option data-tzone="43" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Minsk</option>
+											<option data-tzone="44" data-gmtAdjustment="GMT+02:00" data-useDaylightTime="1" value="2">(GMT+02:00) Windhoek</option>
+											<option data-tzone="45" data-gmtAdjustment="GMT+03:00" data-useDaylightTime="0" value="3">(GMT+03:00) Kuwait, Riyadh, Baghdad</option>
+											<option data-tzone="46" data-gmtAdjustment="GMT+03:00" data-useDaylightTime="1" value="3">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+											<option data-tzone="47" data-gmtAdjustment="GMT+03:00" data-useDaylightTime="0" value="3">(GMT+03:00) Nairobi</option>
+											<option data-tzone="48" data-gmtAdjustment="GMT+03:00" data-useDaylightTime="0" value="3">(GMT+03:00) Tbilisi</option>
+											<option data-tzone="49" data-gmtAdjustment="GMT+03:30" data-useDaylightTime="1" value="3.5">(GMT+03:30) Tehran</option>
+											<option data-tzone="50" data-gmtAdjustment="GMT+04:00" data-useDaylightTime="0" value="4">(GMT+04:00) Abu Dhabi, Muscat</option>
+											<option data-tzone="51" data-gmtAdjustment="GMT+04:00" data-useDaylightTime="1" value="4">(GMT+04:00) Baku</option>
+											<option data-tzone="52" data-gmtAdjustment="GMT+04:00" data-useDaylightTime="1" value="4">(GMT+04:00) Yerevan</option>
+											<option data-tzone="53" data-gmtAdjustment="GMT+04:30" data-useDaylightTime="0" value="4.5">(GMT+04:30) Kabul</option>
+											<option data-tzone="54" data-gmtAdjustment="GMT+05:00" data-useDaylightTime="1" value="5">(GMT+05:00) Yekaterinburg</option>
+											<option data-tzone="55" data-gmtAdjustment="GMT+05:00" data-useDaylightTime="0" value="5">(GMT+05:00) Islamabad, Karachi, Tashkent</option>
+											<option data-tzone="56" data-gmtAdjustment="GMT+05:30" data-useDaylightTime="0" value="5.5">(GMT+05:30) Sri Jayawardenapura</option>
+											<option data-tzone="57" data-gmtAdjustment="GMT+05:30" data-useDaylightTime="0" value="5.5">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+											<option data-tzone="58" data-gmtAdjustment="GMT+05:45" data-useDaylightTime="0" value="5.75">(GMT+05:45) Kathmandu</option>
+											<option data-tzone="59" data-gmtAdjustment="GMT+06:00" data-useDaylightTime="1" value="6">(GMT+06:00) Almaty, Novosibirsk</option>
+											<option data-tzone="60" data-gmtAdjustment="GMT+06:00" data-useDaylightTime="0" value="6">(GMT+06:00) Astana, Dhaka</option>
+											<option data-tzone="61" data-gmtAdjustment="GMT+06:30" data-useDaylightTime="0" value="6.5">(GMT+06:30) Yangon (Rangoon)</option>
+											<option data-tzone="62" data-gmtAdjustment="GMT+07:00" data-useDaylightTime="0" value="7">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+											<option data-tzone="63" data-gmtAdjustment="GMT+07:00" data-useDaylightTime="1" value="7">(GMT+07:00) Krasnoyarsk</option>
+											<option data-tzone="64" data-gmtAdjustment="GMT+08:00" data-useDaylightTime="0" value="8">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+											<option data-tzone="65" data-gmtAdjustment="GMT+08:00" data-useDaylightTime="0" value="8">(GMT+08:00) Kuala Lumpur, Singapore</option>
+											<option data-tzone="66" data-gmtAdjustment="GMT+08:00" data-useDaylightTime="0" value="8">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+											<option data-tzone="67" data-gmtAdjustment="GMT+08:00" data-useDaylightTime="0" value="8">(GMT+08:00) Perth</option>
+											<option data-tzone="68" data-gmtAdjustment="GMT+08:00" data-useDaylightTime="0" value="8">(GMT+08:00) Taipei</option>
+											<option data-tzone="69" data-gmtAdjustment="GMT+09:00" data-useDaylightTime="0" value="9">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+											<option data-tzone="70" data-gmtAdjustment="GMT+09:00" data-useDaylightTime="0" value="9">(GMT+09:00) Seoul</option>
+											<option data-tzone="71" data-gmtAdjustment="GMT+09:00" data-useDaylightTime="1" value="9">(GMT+09:00) Yakutsk</option>
+											<option data-tzone="72" data-gmtAdjustment="GMT+09:30" data-useDaylightTime="0" value="9.5">(GMT+09:30) Adelaide</option>
+											<option data-tzone="73" data-gmtAdjustment="GMT+09:30" data-useDaylightTime="0" value="9.5">(GMT+09:30) Darwin</option>
+											<option data-tzone="74" data-gmtAdjustment="GMT+10:00" data-useDaylightTime="0" value="10">(GMT+10:00) Brisbane</option>
+											<option data-tzone="75" data-gmtAdjustment="GMT+10:00" data-useDaylightTime="1" value="10">(GMT+10:00) Canberra, Melbourne, Sydney</option>
+											<option data-tzone="76" data-gmtAdjustment="GMT+10:00" data-useDaylightTime="1" value="10">(GMT+10:00) Hobart</option>
+											<option data-tzone="77" data-gmtAdjustment="GMT+10:00" data-useDaylightTime="0" value="10">(GMT+10:00) Guam, Port Moresby</option>
+											<option data-tzone="78" data-gmtAdjustment="GMT+10:00" data-useDaylightTime="1" value="10">(GMT+10:00) Vladivostok</option>
+											<option data-tzone="79" data-gmtAdjustment="GMT+11:00" data-useDaylightTime="1" value="11">(GMT+11:00) Magadan, Solomon Is., New Caledonia</option>
+											<option data-tzone="80" data-gmtAdjustment="GMT+12:00" data-useDaylightTime="1" value="12">(GMT+12:00) Auckland, Wellington</option>
+											<option data-tzone="81" data-gmtAdjustment="GMT+12:00" data-useDaylightTime="0" value="12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+											<option data-tzone="82" data-gmtAdjustment="GMT+13:00" data-useDaylightTime="0" value="13">(GMT+13:00) Nuku'alofa</option>
+										</select>
+										<div id="button-row">
+											<button id="save-settings-button">Save</button>
+											<button id="cancel-settings-button">Cancel</button>
+										</div>
+									</div>	
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
+		<script type="text/javascript" src="scripts/widgets.js"></script>
+	</body>
+</html>
