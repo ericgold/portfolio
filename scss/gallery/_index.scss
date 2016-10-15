@@ -13,32 +13,14 @@
 .thumbnail {
 	width: 65%;
 	min-height: 10em;
-	//border: 3px solid black;
-	//border-radius: 3px;
 	margin: 10%;
 	padding: 0.5em;
 	text-align: center;
-	//transition-delay: 0s;
-	//transition-duration: 1.5s;
-	//transition-timing-function: ease-out;
 
 	img {
 		width: 100%;
 	}
-/*
-	p {
-		font-size: 6em;
-	}
 
-
-
-	&:hover {
-		transform: rotateY(180deg);
-		background-color: black;
-		color: white;
-		font-weight: bold;
-	}
-*/
 	@include mq(medium) {
 		width: 35%;
 		margin: 5%;
@@ -48,10 +30,4 @@
 		width: 25%;
 		margin: 2.5%;
 	}
-/*
-	@include mq(extra-large) {
-		width: 12%;
-		margin: 1%;
-	}
-*/
 }

@@ -12,15 +12,37 @@
 #inner-overlay {
 	display: flex;
 	flex-direction: row;
+	background-color: #000000;
+	border: 10px solid white;
+	border-radius: 20px;
 	width: 80%;
+	height: 60%;
+	padding: 4em 0 4em 0;
 	justify-content: center;
 	align-items: center;
 	margin: 10% auto 2%;
 }
 
 #overlay img {
-	width: 40%;
-	max-width: 600px;
+	width: 100%;
+	max-width: 300px;
+
+	@include mq(large) {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+#project-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-decoration: none;
+
+	@include mq(large) {
+		flex-direction: row;
+	}
 }
 
 #project-text {
@@ -28,20 +50,40 @@
 	flex-direction: column;
 	justify-content: space-between;
 	color: white;
-	width: 40%;
+	width: 100%;
 	max-width: 400px;
-	margin: auto auto auto 1em;
+	margin: auto;
+
+	&:hover {
+		color: $secondary-color;
+	}
+
+	@include mq(large) {
+		width: 40%;
+	}
 }
 
 #title {
 	font-family: Cabin;
-	font-size: 2em;
+	font-size: 1.5em;
+
+	@include mq(medium) {
+		font-size: 2em;
+	}
+
+	@include mq(large) {
+		font-size: 3em;
+	}
 }
 
 #description {
 	font-family: Cabin;
 	font-size: 1em;
 	margin: auto;
+
+	@include mq(medium) {
+		font-size: 1.25em;
+	}
 }
 
 .arrow {

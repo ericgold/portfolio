@@ -1,9 +1,13 @@
+var $nameWrapper = $("#name-wrapper");
+var $name = $("#name");
+var $bio = $("#bio");
+
 var $overlay = $("<div id='overlay'></div>");
 var $innerOverlay = $("<div id='inner-overlay'></div>");
+
+var $projectInfo = $("<a href=''id='project-info'></a>");
 var $image = $("<img>");
-
 var $projectText = $("<div id='project-text'></div>");
-
 var $title = $("<p id='title'></p>");
 var $description = $("<p id='description'></p>");
 
@@ -20,45 +24,53 @@ var $galleryLength = $thumbnails.length;
 
 var content = [
 	{
-		desc: "This is the form project",
+		desc: "A responsive form with CSS transitions and Flexbox layout.",
 		url: "projects/form/index.html"
 	},
 	{
-		desc: "This is the photo gallery project",
+		desc: "A Flexbox photo gallery with jQuery lightbox and search filter.",
 		url: "projects/gallery/index.html"
 	},
 	{
-		desc: "This is the video player project",
+		desc: "Custom video player controls with vanilla JavaScript.",
 		url: "projects/video/index.html"
 	},
 	{
-		desc: "This is the web app dashboard project",
+		desc: "Dashboard with chart.js, vanilla JavaScript, SVG icons, and Sass.",
 		url: "projects/dashboard/index.html"
 	},
 	{
-		desc: "This is the API project",
+		desc: "Gallery drawing on SWAPI, the Star Wars API, and OMBb, the Open Movie Database API, with jQuery and Sass.",
 		url: "projects/api/index.html"
 	},
 	{
-		desc: "This is my porfolio of freelance writing",
+		desc: "My porfolio of freelance writing for print and web.",
 		url: "http://www.goldcopywriting.com"
 	},
 
 ];
 
+
+
 $projectText.append($title);
 $projectText.append($description);
+
+
+//$overlay.append($projectText);
+
 $overlay.append($innerOverlay);
-$overlay.append($projectText);
 $("body").append($overlay);
 
 function prepOverlay(image, title, description) {
 	// Add left arrow to inner overlay div
 	$innerOverlay.append($leftArrow);
+	$innerOverlay.append($projectInfo);
+
 	// Add media to the overlay
-	$innerOverlay.append(image);
+	$projectInfo.append(image);
+	$projectInfo.append($projectText);
 	// Add project title and description to the overlay
-	$innerOverlay.append($projectText);
+	//$innerOverlay.append($projectText);
 
 	// Add right arrow to overlay
 	$innerOverlay.append($rightArrow);
@@ -148,3 +160,19 @@ $overlay.click(function(event){
 	if(event.target.id == "overlay")
 	$(this).slideUp("fast");
 });
+
+/*
+// Bio Drop
+
+function toggleBio() {
+//	$name.after($bio);
+	$name.toggle();
+	$bio.toggle();
+}
+
+
+$nameWrapper.hover(toggleBio);
+*/
+
+
+
