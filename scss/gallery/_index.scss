@@ -1,8 +1,19 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	@include flexy(column);
+}
+
 .gallery {
 	@include flexy(column);
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+	flex-grow: 1;
+	
 	padding: 2em;
 
 	@include mq(medium) {
@@ -16,6 +27,7 @@
 	margin: 10%;
 	padding: 0.5em;
 	text-align: center;
+	transition: transform 1s ease-in-out;
 
 	img {
 		width: 100%;
@@ -29,5 +41,9 @@
 	@include mq(large) {
 		width: 25%;
 		margin: 2.5%;
+	}
+
+	&:hover {
+		transform: scale(1.1);
 	}
 }

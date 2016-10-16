@@ -3,12 +3,23 @@ footer {
 	background-color: black;
 }
 
-#twitter-icon {
-	height: 4em;
-	width: 4em;
+#twitter-icon,
+#github-icon {
+	height: 3em;
+	width: 3em;
 }
 
 #twitter-path {
+	height: 100%;
+	width: 100%;
 	fill: white;
+	transform: translate(18px, 18px);
+}
+
+#github-path {
+	height: 100%;
+	width: 100%;
+	fill: white;
+	transform: translate(7px, 7px);
 }
 

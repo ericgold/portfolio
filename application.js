@@ -1,6 +1,7 @@
 var $nameWrapper = $("#name-wrapper");
 var $name = $("#name");
 var $bio = $("#bio");
+var $search = $("#search");
 
 var $overlay = $("<div id='overlay'></div>");
 var $innerOverlay = $("<div id='inner-overlay'></div>");
@@ -11,8 +12,11 @@ var $projectText = $("<div id='project-text'></div>");
 var $title = $("<p id='title'></p>");
 var $description = $("<p id='description'></p>");
 
-var $leftArrow = $("<button class='arrow'>&#10094</button>");
-var $rightArrow = $("<button class='arrow'>&#10095</button>");
+var $leftArrow = $("<button class='arrow'><svg id='left-arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 16'><path id='left-path' d='M6 2L0 8l6 6z'/></svg></button>");
+var $rightArrow = $("<button class='arrow'><svg id='right-arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 16'><path id='right-path' d='M0 14l6-6-6-6z'/></svg></button>");
+
+//&#10094 left
+//&#10095 right
 
 var $thumbnails = $(".thumbnail img");
 var $index = 0;
@@ -166,6 +170,34 @@ function setLink() {
 }
 
 $projectInfo.hover(setLink);
+
+
+// filter function for search field
+function filter() {
+	//sets searchText as whatever is entered in search field
+	var query = $search.val();
+	//for each thumbnail div
+	$(".gallery .thumbnail").each(function(){
+		//sets altText as the alt attribute 
+		//of the img child of the anchor child of the thumbnail div
+		//var altText = $(this).children().children("img").attr("alt");
+		var currentIndex = $(this).attr("data-index");
+		var projInfo = content[currentIndex].desc;
+		//if the search term is 'not not present' in the alt text
+		if (projInfo.toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+			//show the thumbnail (including its child a and a's child img)
+			$(this).fadeIn();
+		//if the search term is 'not present' in the alt text
+		} else {
+			//hide the thumbnail and its contents
+			$(this).fadeOut("fast");
+		}
+	});
+};
+
+// Triggers filter function on keyup in search field
+$search.keyup(filter);
+
 
 
 
