@@ -13,8 +13,11 @@ body {
 	align-items: center;
 	flex-wrap: wrap;
 	flex-grow: 1;
-	
 	padding: 2em;
+
+	perspective: 1000px;
+
+	min-height: calc(100vh - 3rem);
 
 	@include mq(medium) {
 		@include flexy(row);
@@ -22,15 +25,43 @@ body {
 }
 
 .thumbnail {
+	position: relative;
 	width: 65%;
 	min-height: 10em;
 	margin: 10%;
 	padding: 0.5em;
 	text-align: center;
-	transition: transform 1s ease-in-out;
+	transition: transform 1.25s ease-in-out;
+
+	transform-style: preserve-3d;
 
 	img {
+		//position: absolute;
 		width: 100%;
+		backface-visibility: hidden;
+	}
+
+	.side-b {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		backface-visibility: hidden;
+		background-color: black;
+		transform: rotateX(180deg);
+		font-family: Cabin;
+		color: white;
+		padding: 0.5em;
+
+		.project-title {
+			font-size: 2em;
+
+			@include mq(small-medium) {
+				font-size: 3em;
+			}
+		}
+
 	}
 
 	@include mq(medium) {
@@ -44,6 +75,6 @@ body {
 	}
 
 	&:hover {
-		transform: scale(1.1);
+		transform: rotateX(180deg);
 	}
 }

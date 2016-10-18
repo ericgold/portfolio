@@ -1,25 +1,54 @@
 footer {
-	height: 3em;
-	background-color: black;
+	@include flexy(row);
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	background-color: $primary-color;
 }
+
 
 #twitter-icon,
 #github-icon {
 	height: 3em;
 	width: 3em;
+
+	&:hover path {
+		fill: $secondary-color;
+	}
 }
+
+#mail-icon {
+	height: 2em;
+	width: 2em;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: 0.5em;
+
+	&:hover path {
+		fill: $secondary-color;
+	}
+}
+
+
 
 #twitter-path {
 	height: 100%;
 	width: 100%;
-	fill: white;
-	transform: translate(18px, 18px);
+	fill: $light;
+	transform: translate(18px, 20px);
 }
 
 #github-path {
 	height: 100%;
 	width: 100%;
-	fill: white;
-	transform: translate(7px, 7px);
+	fill: $light;
+	transform: translate(7px, 9px);
+}
+
+#mail-path {
+	height: 100%;
+	width: 100%;
+	fill: $light;
+	transform: translate(0px, 1px);
 }
 

@@ -15,16 +15,14 @@ var $description = $("<p id='description'></p>");
 var $leftArrow = $("<button class='arrow'><svg id='left-arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 16'><path id='left-path' d='M6 2L0 8l6 6z'/></svg></button>");
 var $rightArrow = $("<button class='arrow'><svg id='right-arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 16'><path id='right-path' d='M0 14l6-6-6-6z'/></svg></button>");
 
-//&#10094 left
-//&#10095 right
-
+var $thumbnail = $(".thumbnail");
 var $thumbnails = $(".thumbnail img");
 var $index = 0;
 
 var $galleryLength = $thumbnails.length;
 
-//replace with an array of project descriptions
-//var imageDescription = "This is a temporary project description. More to come.";
+var $sideB = $(".side-b");
+var $projectTitle = $(".project-title");
 
 var content = [
 	{
@@ -59,23 +57,18 @@ var content = [
 $projectText.append($title);
 $projectText.append($description);
 
-
-//$overlay.append($projectText);
-
 $overlay.append($innerOverlay);
 $("body").append($overlay);
 
 function prepOverlay(image, title, description) {
 	// Add left arrow to inner overlay div
 	$innerOverlay.append($leftArrow);
+	// Add div to hold project image and text to overlay
 	$innerOverlay.append($projectInfo);
-
-	// Add media to the overlay
+	// Add image to the overlay
 	$projectInfo.append(image);
-	$projectInfo.append($projectText);
 	// Add project title and description to the overlay
-	//$innerOverlay.append($projectText);
-
+	$projectInfo.append($projectText);
 	// Add right arrow to overlay
 	$innerOverlay.append($rightArrow);
 }
@@ -115,19 +108,16 @@ function postImage() {
 	var imageTitle = $(newImgSelected).attr("alt");
 	var imageDescription = content[$index].desc;
 
-	//NEED AN ARRAY OF DESCRIPTIONS, ONE FOR EACH PROJECT
-	//var imageDescription;
-
 	updateImage(imageLocation, imageTitle, imageDescription);
 
 }
 
-$(".thumbnail img").click(function(event) {
+$thumbnail.click(function(event) {
 	event.preventDefault();
-	var imageLocation = $(this).attr("src");
-	var imageCaption = $(this).attr("alt");
-	$index = $(this).parent().index();
-	console.log($(this).index());
+	var imageLocation = $(this).children("img").attr("src");
+	var imageCaption = $(this).children("img").attr("alt");
+	$index = $(this).index();
+	//console.log($(this).index());
 	
 	var imageDescription = content[$index].desc;
 
@@ -178,9 +168,8 @@ function filter() {
 	var query = $search.val();
 	//for each thumbnail div
 	$(".gallery .thumbnail").each(function(){
-		//sets altText as the alt attribute 
-		//of the img child of the anchor child of the thumbnail div
-		//var altText = $(this).children().children("img").attr("alt");
+		
+		//gets project description from content array
 		var currentIndex = $(this).attr("data-index");
 		var projInfo = content[currentIndex].desc;
 		//if the search term is 'not not present' in the alt text
@@ -199,5 +188,10 @@ function filter() {
 $search.keyup(filter);
 
 
+function showTitle() {
+	var $flipTitle = $(this).children("img").attr("alt");
+	$(this).children().children("p").text($flipTitle);
+}
 
+$thumbnail.mouseover(showTitle);
 

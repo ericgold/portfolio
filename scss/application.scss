@@ -3,3 +3,7 @@
 @import 'gallery/_index.scss';
 @import 'footer/_index.scss';
 @import 'overlay/_index.scss';
+
+* {
+	box-sizing: border-box;
+}
