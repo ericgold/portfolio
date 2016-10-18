@@ -6,7 +6,7 @@ var $search = $("#search");
 var $overlay = $("<div id='overlay'></div>");
 var $innerOverlay = $("<div id='inner-overlay'></div>");
 
-var $projectInfo = $("<a href='' id='project-info'></a>");
+var $projectInfo = $("<a href='' id='project-info' target='_blank'></a>");
 var $image = $("<img>");
 var $projectText = $("<div id='project-text'></div>");
 var $title = $("<p id='title'></p>");
