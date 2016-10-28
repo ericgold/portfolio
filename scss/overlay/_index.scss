@@ -1,5 +1,6 @@
 #overlay {
-	background: rgba(0,0,0,0.8);
+	background: $color-primary;
+	opacity: 0.8;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -12,18 +13,19 @@
 #inner-overlay {
 	display: flex;
 	flex-direction: row;
-	background-color: #000000;
-	border: 10px solid white;
+	background: $color-primary;
+	opacity: 1.0;
+	border: 10px solid $light;
 	border-radius: 20px;
 	width: 80%;
-	height: 60%;
+	//height: 75%;
 	padding: 4em 0 4em 0;
 	justify-content: center;
 	align-items: center;
 	margin: 10% auto 2%;
 }
 
-#overlay img {
+#project-info img {
 	width: 100%;
 	max-width: 300px;
 
@@ -41,6 +43,7 @@
 	text-decoration: none;
 	margin: 0 auto 0 auto;
 
+
 	@include mq(large) {
 		flex-direction: row;
 	}
@@ -50,13 +53,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	color: white;
+	color: $light;
 	width: 100%;
 	max-width: 400px;
 	margin: auto;
 
 	&:hover {
-		color: $secondary-color;
+		color: $color-secondary;
 	}
 
 	@include mq(large) {
@@ -65,11 +68,11 @@
 }
 
 #title {
-	font-family: Cabin;
+	font-family: $font-secondary;
 	font-size: 1.5em;
 
 	@include mq(medium) {
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 
 	@include mq(large) {
@@ -78,11 +81,11 @@
 }
 
 #description {
-	font-family: Cabin;
+	font-family: $font-secondary;
 	font-size: 1em;
 	margin: auto;
 
-	@include mq(medium) {
+	@include mq(large) {
 		font-size: 1.25em;
 	}
 }
@@ -91,9 +94,7 @@
 	background-color: transparent;
 	width: 15%;
 	max-width: 3em;
-	//font-size: 4em;
 	padding: 40px 10px;
-	//color: white;
 	border: none;
 	margin: auto;
 }
@@ -111,8 +112,6 @@
 #overlay button:focus {
 	outline: none;
 }
-
-
 
 .hidden {
 	display: none;

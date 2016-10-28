@@ -3,7 +3,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	height: 3rem;
-	background-color: $primary-color;
+	background-color: $color-primary;
 }
 
 
@@ -13,7 +13,7 @@ footer {
 	width: 3em;
 
 	&:hover path {
-		fill: $secondary-color;
+		fill: $color-secondary;
 	}
 }
 
@@ -25,7 +25,7 @@ footer {
 	margin-left: 0.5em;
 
 	&:hover path {
-		fill: $secondary-color;
+		fill: $color-secondary;
 	}
 }
 
