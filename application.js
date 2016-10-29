@@ -1,6 +1,6 @@
-var $nameWrapper = $("#name-wrapper");
-var $name = $("#name");
-var $bio = $("#bio");
+//var $nameWrapper = $("#name-wrapper");
+//var $name = $("#name");
+//var $bio = $("#bio");
 var $search = $("#search");
 
 var $overlay = $("<div id='overlay'></div>");
