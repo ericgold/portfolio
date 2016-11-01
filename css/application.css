@@ -219,29 +219,46 @@ footer {
       height: 300px; } }
 
 #project-info {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   text-decoration: none;
-  margin: 0 auto 0 auto; }
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center; }
   @media (min-width: 1024px) {
     #project-info {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
       flex-direction: row; } }
 
 #project-text {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   color: #ffffff;
   width: 100%;
   max-width: 400px;
-  margin: auto; }
-  #project-text:hover {
-    color: #ffd900; }
+  margin: auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
   @media (min-width: 1024px) {
     #project-text {
       width: 40%; } }
+  #project-text:hover {
+    color: #ffd900; }
 
 #title {
   font-family: "Cabin";
@@ -275,7 +292,7 @@ footer {
 
 #left-path,
 #right-path {
-  fill: white; }
+  fill: #ffffff; }
 
 #overlay button:focus {
   outline: none; }

@@ -24,7 +24,6 @@ header {
 
 	@include mq(medium) {
 		width: 40%;
-		//max-width: 8em;
 		text-align: start;
 		margin: 0 auto 0 1em;
 	}
@@ -39,7 +38,6 @@ header {
 	margin: auto;
 
 	@include mq(medium) {
-		//width: 30%;
 		max-width: 10em;
 		text-align: start;
 		margin: 0 1em 0 0;

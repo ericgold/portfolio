@@ -1,8 +1,5 @@
 #overlay {
-	//background: $color-overlay;
 	background: radial-gradient(circle, $color-overlay-primary, $color-overlay-secondary);
-
-	//opacity: 0.8;
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -16,11 +13,9 @@
 	display: flex;
 	flex-direction: row;
 	background: $color-primary;
-	//opacity: 1.0;
 	border: 10px solid $light;
 	border-radius: 20px;
 	width: 80%;
-	//height: 75%;
 	padding: 4em 0 4em 0;
 	justify-content: center;
 	align-items: center;
@@ -38,34 +33,32 @@
 }
 
 #project-info {
-	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
-	align-items: center;
 	text-decoration: none;
 	margin: 0 auto 0 auto;
 
+	@include flexy(column, center);
 
 	@include mq(large) {
-		flex-direction: row;
+		@include flexy(row);
 	}
 }
 
 #project-text {
-	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	color: $light;
 	width: 100%;
 	max-width: 400px;
 	margin: auto;
 
-	&:hover {
-		color: $color-secondary;
-	}
+	@include flexy(column);
 
 	@include mq(large) {
 		width: 40%;
+	}
+
+	&:hover {
+		color: $color-secondary;
 	}
 }
 
@@ -108,7 +101,7 @@
 
 #left-path,
 #right-path {
-	fill: white;
+	fill: $light;
 }
 
 #overlay button:focus {
