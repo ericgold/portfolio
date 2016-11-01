@@ -2,8 +2,9 @@ header {
 	@include flexy(column);
 	justify-content: center;
 	align-items: center;
-	height: 6rem;
+	height: 7rem;
 	background-color: $color-primary;
+	padding: 0.5em 0;
 	//perspective: 800px;
 
 	@include mq(medium) {
@@ -22,9 +23,28 @@ header {
 	margin: auto;
 
 	@include mq(medium) {
+		width: 40%;
+		//max-width: 8em;
 		text-align: start;
 		margin: 0 auto 0 1em;
 	}
+}
+
+#bio {
+	text-align: center;
+	width: 90%;
+	font-family: $font-primary;
+	color: $light;
+	background-color: $color-primary;
+	margin: auto;
+
+	@include mq(medium) {
+		//width: 30%;
+		max-width: 10em;
+		text-align: start;
+		margin: 0 1em 0 0;
+	}
+
 }
 
 #search {

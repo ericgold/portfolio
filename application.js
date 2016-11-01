@@ -1,6 +1,3 @@
-//var $nameWrapper = $("#name-wrapper");
-//var $name = $("#name");
-//var $bio = $("#bio");
 var $search = $("#search");
 
 var $overlay = $("<div id='overlay'></div>");
@@ -52,11 +49,9 @@ var content = [
 
 ];
 
-
-
+// OVERLAY ASSEMBLY
 $projectText.append($title);
 $projectText.append($description);
-
 $overlay.append($innerOverlay);
 $("body").append($overlay);
 
@@ -75,12 +70,8 @@ function prepOverlay(image, title, description) {
 
 function updateImage(imageLocation, imageTitle, imageDescription) {
 	$image.attr("src", imageLocation);
-	
 	$title.text(imageTitle);
 	$description.text(imageDescription);
-
-	
-
 	prepOverlay($image, $title, $description);
 }
 
@@ -103,7 +94,6 @@ function prevNext(prev) {
 
 function postImage() {
 	var newImgSelected = $(".thumbnail").get($index).getElementsByTagName("img");
-
 	var imageLocation = $(newImgSelected).attr("src");
 	var imageTitle = $(newImgSelected).attr("alt");
 	var imageDescription = content[$index].desc;
@@ -117,10 +107,7 @@ $thumbnail.click(function(event) {
 	var imageLocation = $(this).children("img").attr("src");
 	var imageCaption = $(this).children("img").attr("alt");
 	$index = $(this).index();
-	//console.log($(this).index());
-	
 	var imageDescription = content[$index].desc;
-
 	updateImage(imageLocation, imageCaption, imageDescription);
 	$overlay.slideDown(imageLocation);
 });
@@ -187,11 +174,46 @@ function filter() {
 // Triggers filter function on keyup in search field
 $search.keyup(filter);
 
-
+// Show project title on thumbnail side-b
 function showTitle() {
 	var $flipTitle = $(this).children("img").attr("alt");
 	$(this).children().children("p").text($flipTitle);
+	changeColor();
 }
 
-$thumbnail.mouseover(showTitle);
+$thumbnail.mouseenter(showTitle);
+
+
+// Random color generator for thumbnail side-b
+function getRandom(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function makeColor() {
+	var r = getRandom(0,255);
+	var g = getRandom(0,255);
+	var b = getRandom(0,255);
+	var x = "radial-gradient(circle, rgb(0,0,0)," + "rgb("+r + "," + g + "," + b + "))";
+	return x;
+}
+
+function changeColor() {
+	//makeColor();
+	var newColor = makeColor();
+	$(this).children(".side-b").css("background-image", newColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
