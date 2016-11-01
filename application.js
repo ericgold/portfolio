@@ -178,10 +178,10 @@ $search.keyup(filter);
 function showTitle() {
 	var $flipTitle = $(this).children("img").attr("alt");
 	$(this).children().children("p").text($flipTitle);
-	changeColor();
 }
 
 $thumbnail.mouseenter(showTitle);
+$thumbnail.mouseenter(changeColor);
 
 
 // Random color generator for thumbnail side-b
@@ -200,7 +200,6 @@ function makeColor() {
 }
 
 function changeColor() {
-	//makeColor();
 	var newColor = makeColor();
 	$(this).children(".side-b").css("background-image", newColor);
 }
