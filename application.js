@@ -109,6 +109,9 @@ $thumbnail.click(function(event) {
 	$index = $(this).index();
 	var imageDescription = content[$index].desc;
 	updateImage(imageLocation, imageCaption, imageDescription);
+
+	changeOverlayColor();
+
 	$overlay.slideDown(imageLocation);
 });
 
@@ -191,17 +194,22 @@ function getRandom(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function makeColor() {
+function makeGradient(a) {
 	var r = getRandom(0,255);
 	var g = getRandom(0,255);
 	var b = getRandom(0,255);
-	var x = "radial-gradient(circle, rgb(0,0,0)," + "rgb("+r + "," + g + "," + b + "))";
-	return x;
+	var gradient = "radial-gradient(circle, rgb(0,0,0)," + "rgba("+r + "," + g + "," + b + "," + a + "))";
+	return gradient;
 }
 
 function changeColor() {
-	var newColor = makeColor();
+	var newColor = makeGradient(1.0);
 	$(this).children(".side-b").css("background-image", newColor);
+}
+
+function changeOverlayColor() {
+	var newColor = makeGradient(0.8);
+	$overlay.css("background-image", newColor);
 }
 
 

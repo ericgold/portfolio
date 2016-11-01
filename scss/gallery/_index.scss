@@ -5,10 +5,9 @@
 	flex-wrap: wrap;
 	flex-grow: 1;
 	padding: 2em;
-
 	perspective: 1000px;
 
-	min-height: calc(100vh - 3rem);
+	min-height: calc(100vh - 11rem);
 
 	@include mq(medium) {
 		@include flexy(row);
