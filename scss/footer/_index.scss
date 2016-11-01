@@ -2,8 +2,14 @@ footer {
 	@include flexy(row);
 	justify-content: center;
 	align-items: center;
-	height: 3rem;
+	height: 4rem;
 	background-color: $color-primary;
+}
+
+.social-icon {
+	&:focus {
+		outline: 2px solid $color-secondary;
+	}
 }
 
 
@@ -16,20 +22,6 @@ footer {
 		fill: $color-secondary;
 	}
 }
-
-#mail-icon {
-	height: 2em;
-	width: 2em;
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-left: 0.5em;
-
-	&:hover path {
-		fill: $color-secondary;
-	}
-}
-
-
 
 #twitter-path {
 	height: 100%;
@@ -45,10 +37,4 @@ footer {
 	transform: translate(7px, 9px);
 }
 
-#mail-path {
-	height: 100%;
-	width: 100%;
-	fill: $light;
-	transform: translate(0px, 1px);
-}
 
