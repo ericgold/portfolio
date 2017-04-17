@@ -44,7 +44,7 @@ var content = [
 	},
 	{
 		desc: "My porfolio of freelance writing for print and web.",
-		url: "http://www.goldcopywriting.com"
+		url: "/clips"
 	},
 
 ];
